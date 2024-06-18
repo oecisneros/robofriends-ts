@@ -1,4 +1,3 @@
-import * as React from "react";
 import * as ReactDOM from "react-dom";
 import * as Reducers from "./reducers";
 import App from "./containers/App";
