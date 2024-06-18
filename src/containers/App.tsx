@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from "react";
-import { Dispatch } from 'redux';
+import { Dispatch } from "redux";
 import { connect } from "react-redux";
 import MainPage from "./MainPage";
 import * as Actions from "../actions";
@@ -9,12 +10,13 @@ const mapStateToProps = (state: any) => ({
   searchField: state.searchRobots.searchField,
   robots: state.requestRobots.robots,
   isPending: state.requestRobots.isPending,
-  error: state.requestRobots.error
+  error: state.requestRobots.error,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  onSearchChange: ({ target }: any) => dispatch(Actions.setSearchField(target.value)),
-  onRequestRobots: () => (dispatch as any)(Actions.requestRobots)
+  onSearchChange: ({ target }: any) =>
+    dispatch(Actions.setSearchField(target.value)),
+  onRequestRobots: () => (dispatch as any)(Actions.requestRobots),
 });
 
 class App extends React.Component<IProps> {

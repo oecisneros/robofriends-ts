@@ -2,32 +2,37 @@
   "name": "robofriends-ts",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "homepage": "https://oecisneros.github.io/robofriends-ts",
   "dependencies": {
     "@types/react-redux": "^6.0.6",
-    "gh-pages": "^1.2.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-redux": "^5.0.7",
-    "react-scripts-ts": "2.17.0",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "tachyons": "^4.11.1"
   },
   "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "serve": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.1",
-    "@types/node": "^10.5.6",
-    "@types/react": "^16.4.7",
-    "@types/react-dom": "^16.0.6",
-    "typescript": "^3.0.1"
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "typescript": "^5.2.2",
+    "gh-pages": "^6.1.1",
+    "vite": "^5.2.0"
   }
 }
